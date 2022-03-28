@@ -15,12 +15,12 @@ public class NewsPage {
 
     public ArrayList<SelenideElement> getArrayList() {
         arrayList = new ArrayList<>();
-        String firstTag = "/html/body/div[4]/div[2]/main/article/div/div[1]/div[5]/div[4]/ul/li[";
-        String secondTag = "]/a";
-        SelenideElement tag = $x(firstTag + "1" + secondTag);
+        String firstPartPathTag = "/html/body/div[4]/div[2]/main/article/div/div[1]/div[5]/div[4]/ul/li[";
+        String secondPartPathTag = "]/a";
+        SelenideElement tag = $x(firstPartPathTag + "1" + secondPartPathTag);
         for (int i = 2; tag.exists(); i++) {
             arrayList.add(tag);
-            tag = $x(firstTag + i + secondTag);
+            tag = $x(firstPartPathTag + i + secondPartPathTag);
         }
         return arrayList;
     }
