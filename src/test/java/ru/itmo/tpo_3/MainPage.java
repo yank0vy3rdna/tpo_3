@@ -2,7 +2,6 @@ package ru.itmo.tpo_3;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 // https://beincrypto.com
@@ -15,6 +14,9 @@ public class MainPage {
 
     public SelenideElement newsTag = $x("//li/a");
 
+    /*
+     * Check View news headlines
+     */
     public SelenideElement learnTag = $x("//nav/div/ul/li/a");
     public SelenideElement tradingTag = $x("/html/body/div[4]/div[2]/main/section[1]/div/div/div[2]/div/div[1]/a/div[2]");
 
@@ -39,7 +41,10 @@ public class MainPage {
     public SelenideElement pressReleasesTag = $x("/html/body/header/div/nav/div/ul/li[8]/a");
     public SelenideElement checkPressReleasesTag = $x("/html/body/div[4]/div[2]/main/div[1]/h1/span");
 
-//    public SelenideElement latestNewsTag = $x("");
+    /*
+     * Check View full article
+     */
+    public SelenideElement tagNewsMainPage = $x("/html/body/div[4]/div[2]/main/section[1]/div/div[2]/div/div[2]/h3/a");
 
 
 }
