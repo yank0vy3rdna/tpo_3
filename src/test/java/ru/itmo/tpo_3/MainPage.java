@@ -46,5 +46,12 @@ public class MainPage {
      */
     public SelenideElement tagNewsMainPage = $x("/html/body/div[4]/div[2]/main/section[1]/div/div[2]/div/div[2]/h3/a");
 
+    public SelenideElement checkFirstName = $x("/html/body/div[2]/div/div[3]/div[1]/div[2]/a");
+
+    public SelenideElement checkLogOut = $x("/html/body/div[2]/div/div[3]/a");
+
+
+
+
 
 }

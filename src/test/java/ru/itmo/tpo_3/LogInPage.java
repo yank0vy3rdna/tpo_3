@@ -17,4 +17,16 @@ public class LogInPage {
     public SelenideElement editAccount = $x("/html/body/main/article/div/div/div/div/div[2]/div/h1");
 
     public SelenideElement errorText = $x("/html/body/header/div/div[1]/div/div[2]/div/div/div[2]/div[1]/div[1]/form/div[4]/div"); //Error: The username ghdgfghgjfdcg is not registered on this site. If you are unsure of your username, try your email address instead.
+
+    public SelenideElement logOutButton = $x("/html/body/div[2]/div/div[5]/div[2]/ul/li[2]/form/button");
+
+    public SelenideElement firstName = $x("/html/body/main/article/div/div/div/div/div[2]/div/form/div/div[1]/div/input");
+
+
+    public void logIn(){
+        profileButton.click();
+        emailInput.setValue(LogInPage.EMAIL);
+        passwordInput.setValue(LogInPage.PASSWORD);
+        signInButton.click();
+    }
 }

@@ -12,6 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTest {
     MainPage mainPage = new MainPage();
+    LogInPage logInPage = new LogInPage();
 
     @BeforeAll
     public static void setUpAll() {
@@ -82,6 +83,14 @@ public class MainPageTest {
     public void checkPressReleasesTag() {
         mainPage.pressReleasesTag.click();
         Assertions.assertEquals("PRESS RELEASES", mainPage.checkPressReleasesTag.text());
+    }
+
+    @Test
+    public void checkChangeName() {
+        logInPage.logIn();
+        String name = logInPage.firstName.text();
+        mainPage.hamburger.click();
+        Assertions.assertEquals(name, mainPage.checkFirstName.text());
     }
 
 }

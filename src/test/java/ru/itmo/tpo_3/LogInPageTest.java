@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LogInPageTest {
     LogInPage logInPage = new LogInPage();
+    MainPage mainPage = new MainPage();
 
     @BeforeAll
     public static void setUpAll() {
@@ -27,10 +28,7 @@ public class LogInPageTest {
 
     @Test
     public void signInSuccess() {
-        logInPage.profileButton.click();
-        logInPage.emailInput.setValue(LogInPage.EMAIL);
-        logInPage.passwordInput.setValue(LogInPage.PASSWORD);
-        logInPage.signInButton.click();
+        logInPage.logIn();
         Assertions.assertEquals("Edit Account", logInPage.editAccount.text());
     }
 
@@ -42,6 +40,15 @@ public class LogInPageTest {
         logInPage.signInButton.click();
         Selenide.sleep(3000);
         Assertions.assertEquals("Error: The password you entered for the email address " + LogInPage.EMAIL + " is incorrect. Lost your password?", logInPage.errorText.text());
+    }
+
+    @Test
+    public void checkLogOut() {
+        logInPage.logIn();
+        mainPage.hamburger.click();
+        logInPage.logOutButton.click();
+        mainPage.hamburger.click();
+        Assertions.assertEquals("Sign in", mainPage.checkLogOut.text());
     }
 
 
