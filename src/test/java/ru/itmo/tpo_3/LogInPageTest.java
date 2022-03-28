@@ -42,14 +42,15 @@ public class LogInPageTest {
         Assertions.assertEquals("Error: The password you entered for the email address " + LogInPage.EMAIL + " is incorrect. Lost your password?", logInPage.errorText.text());
     }
 
-    @Test
-    public void checkLogOut() {
-        logInPage.logIn();
-        mainPage.hamburger.click();
-        logInPage.logOutButton.click();
-        mainPage.hamburger.click();
-        Assertions.assertEquals("Sign in", mainPage.checkLogOut.text());
-    }
+//    @Test
+//    public void checkLogOut() {
+//        logInPage.logIn();
+//        mainPage.mainIcon.click();
+//        mainPage.hamburger.click();
+//        logInPage.logOutButton.click();
+//        mainPage.hamburger.click();
+//        Assertions.assertEquals("Sign in", mainPage.checkLogOut.text());
+//    }
 
 
 }

@@ -50,7 +50,7 @@ public class MainPage {
 
     public SelenideElement checkLogOut = $x("/html/body/div[2]/div/div[3]/a");
 
-
+    public SelenideElement mainIcon = $x("/html/body/header/div/div[1]/a[1]");
 
 
 
