@@ -45,25 +45,25 @@ public class MainPageTest {
     @Test
     public void checkLatestNewsTag() {
         mainPage.latestNewsTag.click();
-        Assertions.assertEquals("Privacy Coins Enjoy ‘Green March’ As Interest Surges", mainPage.checkLatestNewTag.text());
+        Assertions.assertEquals("NEWS", mainPage.checkLatestNewTag.text());
     }
 
     @Test
     public void checkOpinionTag() {
         mainPage.opinionTag.click();
-        Assertions.assertEquals("Web3 Will Only Surpass Web2 When it Becomes Less Annoying to Use", mainPage.checkOpinionTag.text());
+        Assertions.assertEquals("OPINION", mainPage.checkOpinionTag.text());
     }
 
     @Test
     public void checkBitcoinTag() {
         mainPage.bitcoinTag.click();
-        Assertions.assertEquals("BTMs: Bitcoin ATM Company Adds Dogecoin to Machines", mainPage.checkBitcoinTag.text());
+        Assertions.assertEquals("BITCOIN NEWS", mainPage.checkBitcoinTag.text());
     }
 
     @Test
     public void checkAltcoinTag() {
         mainPage.altcoinTag.click();
-        Assertions.assertEquals("Bitcoin Island: A Crypto Paradise off the Coast of Vanuatu", mainPage.checkAltcoinTag.text());
+        Assertions.assertEquals("ALTCOIN NEWS", mainPage.checkAltcoinTag.text());
     }
 
     @Test
